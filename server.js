@@ -6,7 +6,7 @@ app.use(express.json());
 
 const usuarios = [];
 
-app.get("/cadastro", (req, res) => {
+app.get("/usuarios", (req, res) => {
     res.status(200).json(usuarios);
 });
 

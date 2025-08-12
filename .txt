@@ -1,0 +1,5 @@
+MONGO DB
+
+nome: GabrielCaspirro
+senha: Gab!2008
+string de conexão: mongodb+srv://GabrielCaspirro:Gab!2008@primeirocluster.x5hpbya.mongodb.net/?retryWrites=true&w=majority&appName=PrimeiroCluster
