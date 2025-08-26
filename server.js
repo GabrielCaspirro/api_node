@@ -28,6 +28,36 @@ app.post("/cadastro", async (req, res) => {
     res.status(201).json(req.body);
 });
 
+app.put("/atualizar/:id", async (req, res) => {
+    const id = req.params.id;
+    
+    await prisma.usuario.update({
+        where: {
+            id: id
+        },
+        data: {
+            email: req.body.email,
+            nome: req.body.nome,
+            idade: req.body.idade
+        }
+    })
+
+    res.status(201).json({"mensagem": "Usuário atualizado"});
+});
+
+app.delete("/deletar/:id", async (req, res) => {
+    const id = req.params.id;
+    
+    await prisma.usuario.delete({
+        where: {
+            id: id
+        }
+    })
+
+    res.status(201).json({"mensagem": "Usuário deletado"});
+});
+
+
 app.listen(3000, () => {
     console.log("Servidor rodando!");
 });
